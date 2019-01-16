@@ -16,14 +16,14 @@ export class PostListItemComponent implements OnInit {
 
   // Variables
   signeLoveIts = '';
-  //post: Post;
+  post: Post;
 
 
   constructor() {
   }
 
   ngOnInit() {
-    post = new Post(this.titleParam, this.contentParam, this.loveItsParam);
+    this.post = new Post(this.titleParam, this.contentParam, this.loveItsParam);
     this.initCouleur();
   }
 
