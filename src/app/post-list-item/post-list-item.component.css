@@ -1,4 +1,7 @@
 .date{
     position: absolute;
     right: 5%;
+    font-style: italic;
+    color: gray;
+    font-size: 150%;
 }
