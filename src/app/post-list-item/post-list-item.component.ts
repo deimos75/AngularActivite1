@@ -16,14 +16,14 @@ export class PostListItemComponent implements OnInit {
 
   // Variables
   signeLoveIts = '';
-  post: Post;
+  //post: Post;
 
 
   constructor() {
   }
 
   ngOnInit() {
-    this.post = new Post(this.titleParam, this.contentParam, this.loveItsParam);
+    post = new Post(this.titleParam, this.contentParam, this.loveItsParam);
     this.initCouleur();
   }
 
@@ -43,13 +43,13 @@ export class PostListItemComponent implements OnInit {
   // Fonctions Click -> changement de la couleur des posts
   onLoveItsPlus() {
     this.loveItsParam++;
-    this.couleur();
+    this.initCouleur();
     console.log('LoveIts = ' + this.loveItsParam);
   }
 
   onLoveItsMinus() {
     this.loveItsParam--;
-    this.couleur();
+    this.initCouleur();
     console.log('LoveIts = ' + this.loveItsParam);
   }
 
