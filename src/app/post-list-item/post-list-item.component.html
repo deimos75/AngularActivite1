@@ -1,0 +1,18 @@
+<li [ngClass]="{'list-group-item': true, 
+                'list-group-item-success': signeLoveIts==='positif',
+                'list-group-item-danger': signeLoveIts==='negatif'}">
+
+  <table>
+    <tr>
+      <td><h1>{{titleParam}}</h1></td>
+      <td class="date"><span>Le {{dateParam | date: 'dd/MM/yyyy'}} à {{dateParam | date: 'HH:mm:ss'}}</span></td>
+    </tr>
+    <tr>
+      <td>{{contentParam}}</td>
+      <td></td>
+    </tr>
+  </table>
+  <br>
+  <button class="btn btn-success" [disabled]="isAuth" (click) = "onLoveItsPlus()">Love it!</button>
+  <button class="btn btn-danger" (click) = "onLoveItsMinus()" style="margin-left: 20px;">Don't love it!</button>
+</li>
