@@ -4,11 +4,11 @@
 
   <table>
     <tr>
-      <td><h1>{{titleParam}}</h1></td>
-      <td class="date"><span>Le {{dateParam | date: 'dd/MM/yyyy'}} à {{dateParam | date: 'HH:mm:ss'}}</span></td>
+      <td><h1>{{post.titre}}</h1>
+      <td class="date"><span>Le {{post.date | date: 'dd/MM/yyyy'}} à {{post.date | date: 'HH:mm:ss'}}</span></td>
     </tr>
     <tr>
-      <td>{{contentParam}}</td>
+      <td>{{post.contenu}}</td>
       <td></td>
     </tr>
   </table>

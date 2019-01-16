@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-post-list-item',
@@ -10,19 +9,21 @@ import { Title } from '@angular/platform-browser';
 
 export class PostListItemComponent implements OnInit {
 
-  // Paramètres venant du template d'un autre composant
+  // Paramètres venant du template d'un autre composant contenant les données d'un post
   @Input() titleParam: string;
   @Input() contentParam: string;
   @Input() loveItsParam: number;
-  @Input() dateParam: Date;
   
   // Variables
   signeLoveIts = '';
+  post:Post;
+
 
   constructor() {
   }
   
   ngOnInit() {
+    this.post = new Post(this.titleParam, this.contentParam, this.loveItsParam);
     this.couleur();
   }
 
@@ -53,3 +54,19 @@ export class PostListItemComponent implements OnInit {
   }
 
 }
+
+export class Post{
+  titre: string;
+  contenu: string;
+  loveIts: number;
+  date: Date;
+
+  constructor(titreParam:string, contenuParam:string, loveItsParam:number){
+    this.titre = titreParam;
+    this.contenu = contenuParam;
+    this.loveIts = loveItsParam;
+    this.date = new Date();
+  }
+
+}
+
