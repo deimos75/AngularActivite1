@@ -19,7 +19,7 @@ import { FormsModule } from '@angular/forms';   // Two ways binding
     BrowserModule,
     FormsModule
   ],
-  exports:[
+  exports: [
     AppComponent
   ],
   providers: [],

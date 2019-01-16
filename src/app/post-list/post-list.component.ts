@@ -9,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class PostListComponent implements OnInit {
 
-  // Création d'un paramètre récupérant le tableau des posts d'un autre component (html)
+  // Paramètre récupérant le tableau des posts du component parent (cf html)
   @Input() postsParam: string;
 
   title = 'Posts';

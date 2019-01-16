@@ -1,10 +1,10 @@
 <h1>{{title}}</h1>
 
-<!-- Appelle du component PostListItemComponent -->
 <ul class='list-group'>
+  <!-- Appelle du component fils PostListItemComponent -->
   <app-post-list-item *ngFor="let item of postsParam"
                         [titleParam]="item.title"
                         [contentParam]="item.content"
                         [loveItsParam]="item.loveIts">
-</app-post-list-item>
+  </app-post-list-item>
 </ul>
