@@ -5,7 +5,7 @@
   <table>
     <tr>
       <td><h1>{{post.titre}}</h1>
-      <td class="date"><span>Le {{post.date | date: 'dd/MM/yyyy'}} à {{post.date | date: 'HH:mm:ss'}}</span></td>
+      <td class="date"><span>Le {{post.created_at | date: 'dd/MM/yyyy'}} à {{post.created_at | date: 'HH:mm:ss'}}</span></td>
     </tr>
     <tr>
       <td>{{post.contenu}}</td>
