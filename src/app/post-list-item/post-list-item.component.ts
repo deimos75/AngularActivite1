@@ -60,13 +60,13 @@ export class Post {
   titre: string;
   contenu: string;
   loveIts: number;
-  date: Date;
+  created_at: Date;
 
   constructor(titreParam: string, contenuParam: string, loveItsParam: number) {
     this.titre = titreParam;
     this.contenu = contenuParam;
     this.loveIts = loveItsParam;
-    this.date = new Date();
+    this.created_at = new Date();
   }
 
 }
